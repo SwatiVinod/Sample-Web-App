@@ -28,6 +28,9 @@ function handleClearShareUrl() {
 function openIceBreaker() {
   window.location.href = "icebreaker.html";
 }
+function spyfall() {
+  window.location.href = "https://www.spyfall.app/"
+}
 
 function updateName() {
   let name = '';

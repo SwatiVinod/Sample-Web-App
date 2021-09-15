@@ -1,3 +1,17 @@
+var app = new window.Webex.Application();
+
+app.onReady().then(function () {
+    log("App is ready, getting user info...", {})
+    app.context.getUser().then(
+        function (user) {
+            log()
+        }
+    ).catch(
+        function (error) {
+            log("getUser promise rejected with " + error.message, {});
+        })
+}
+)
 cast =[
     {  Name:"Millie Bobby Brown", DOB: "19/02/2004", Age: 17,  Place: "Marbella, Spain", 
      Cast: "Eleven" },

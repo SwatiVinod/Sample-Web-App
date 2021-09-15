@@ -12,6 +12,16 @@ app.onReady().then(function () {
         })
 }
 )
+function handleSetShareUrl() {
+  var url = document.getElementById("shareUrl").value
+  app.setShareUrl(url);
+  log('setShareUrl()', {message:'Set URL to share: ',url:url})
+}
+
+function handleClearShareUrl() {
+  app.clearShareUrl();
+  log('clearShareUrl()', {message:'Cleared shared URL'})
+}
 cast =[
     {  Name:"Millie Bobby Brown", DOB: "19/02/2004", Age: 17,  Place: "Marbella, Spain", 
      Cast: "Eleven" },

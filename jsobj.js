@@ -1,26 +1,39 @@
 var app = new window.Webex.Application();
+const APP_URL = 'https://swativinod.github.io/Sample-Web-App/'
 
 app.onReady().then(function () {
-    log("App is ready, getting user info...", {})
+    console.log("App is ready, getting user info...", {})
     app.context.getUser().then(
         function (user) {
-            log()
+            console.log('Here '+user)
         }
     ).catch(
         function (error) {
-            log("getUser promise rejected with " + error.message, {});
+            console.log("getUser promise rejected with " + error.message, {});
         })
 }
 )
+
 function handleSetShareUrl() {
-  var url = document.getElementById("shareUrl").value
-  app.setShareUrl(url);
-  log('setShareUrl()', {message:'Set URL to share: ',url:url})
+  //var url = document.getElementById("shareUrl").value
+  app.setShareUrl(APP_URL);
+  console.log('setShareUrl()', {message:'Set URL to share: ',url:APP_URL})
 }
 
 function handleClearShareUrl() {
   app.clearShareUrl();
-  log('clearShareUrl()', {message:'Cleared shared URL'})
+  console.log('clearShareUrl()', {message:'Cleared shared URL'})
+}
+
+function openIceBreaker() {
+  window.location.href = "icebreaker.html";
+}
+
+function updateName() {
+  let name = '';
+  if(app.isPrivateDataAvailable && app.context.getUser())
+    name = app.context.getUser().displayName;
+  document.getElementById("Username").innerHTML="Welcome "+ name;
 }
 cast =[
     {  Name:"Millie Bobby Brown", DOB: "19/02/2004", Age: 17,  Place: "Marbella, Spain", 

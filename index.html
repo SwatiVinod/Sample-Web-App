@@ -8,15 +8,18 @@
 </head>
 <script src="https://binaries.webex.com/static-content-pipeline/webex-embedded-app/v1/webex-embedded-app-sdk.js" defer></script>
 <script src="jsobj.js" defer></script>
-<body>
+<body onload="updateName()">
 
     <div class="container">
         <div class="navbar">
+            <div class="login_nav" id="Username">
+                <h5></h5>
+           
+            </div>
             <nav>
                 <ul>
-                    <li><a href="https://www.youtube.com/">GAME</a></li>
-                    <li><a href="#">CAST</a></li>
-                    <li><a href="#">SEASON 4 UPDATES</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href='#' onclick=handleSetShareUrl()>SHARE WITH EVERYONE</a></li>
                 </ul>
             </nav>
            
@@ -24,11 +27,8 @@
 
         <div class="row">
             <div class="col">
-                <input id="shareUrl" size="45"/>
-`               <button onclick="handleSetShareUrl()">Set sharing URL</button>
-                <button onclick="handleClearShareUrl()">Clear sharing URL</button>
-                <div class="card card1" onclick="out(0)">
-                    <h5>ELEVEN</h5>
+                <div class="card card1" onclick="openIceBreaker()">
+                    <h5>ICE BREAKER</h5>
             
                 </div>
                 <div class="card card2" onclick="out(1)">

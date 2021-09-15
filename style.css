@@ -9,7 +9,7 @@
 .container{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(st.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(background2.jpeg);
     background-position: center;
     position: fixed;
     background-size: cover;
@@ -93,29 +93,26 @@ h1{
 
 .card1
 {
-    background-image: url(eleven.jpg);
+    background-image: url(icebreakers.webp);
 }
 
 .card2{
-    background-image: url(will.jpg);
+    background-image: url(icebreaker.png);
 
 }
 
 .card3{
-    background-image: url(mike.jpg);
+    background-image: url(stressbuster.png);
 }
 
 .card4{
-    background-image: url(steve.jpg);
+    background-image: url(Trivia.jpeg);
 }
 
-.card5{
-    background-image: url(max.jpg);
+.game1{
+    background-image: url(game1.jpeg);
 }
 
-.card6{
-    background-image: url(nancy.png);
-}
 
 .card:hover{
     transform: translateY(-10px);

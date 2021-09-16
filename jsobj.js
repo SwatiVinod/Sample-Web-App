@@ -90,10 +90,13 @@ function scattergories(){
 }
 
 function updateName() {
-  let name = '';
-  if(app.isPrivateDataAvailable && app.context.getUser())
-    name = app.context.getUser().displayName;
-  document.getElementById("Username").innerHTML="Welcome "+ name;
+  let name = '!';
+  if(app.isPrivateDataAvailable) {
+    let user = await app.context.getUser()
+    name = ' '+user.displayName;
+    console.log('Got name from framework')
+  }
+  document.getElementById("Username").innerHTML="Welcome"+ name;
 }
 // cast =[
 //     {  Name:"Millie Bobby Brown", DOB: "19/02/2004", Age: 17,  Place: "Marbella, Spain", 

@@ -132,7 +132,7 @@ function scattergories(){
      window.location.href = " https://scattergoriesonline.net/"
 }
 
-function updateName() {
+async function updateName() {
   let name = '!';
   if(app.isPrivateDataAvailable) {
     let user = await app.context.getUser();

@@ -3,6 +3,7 @@ const APP_URL = 'https://swativinod.github.io/Sample-Web-App/'
 
 app.onReady().then(function () {
     console.log("App is ready, getting user info...", {})
+    updateColorTheme(app.theme)
     app.context.getUser().then(
         function (user) {
             console.log('Here '+user)

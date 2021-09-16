@@ -56,12 +56,11 @@ nav ul li a{
 }
 
 .row{
-    display: flex;
+    
     flex-wrap: wrap;
     height: 90%;
     align-items: center;
     width: auto;
-
 }
 
 .col{

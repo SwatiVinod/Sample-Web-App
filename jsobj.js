@@ -31,12 +31,12 @@ app.onReady().then(function () {
 function updateColorTheme(theme) {
      switch (theme) {
          case "LIGHT":
-             body.style["background"] = "#FFFFFF";
-             body.style["color"] = "#000000";
+             document.getElementById('home-page').classList.remove('container');
+             document.getElementById('home-page').classList.add('containerlight');
              break;
          case "DARK":
-             body.style["background"] = "#121212";
-             body.style["color"] = "#F7F7F7";
+             document.getElementById('home-page').classList.remove('containerlight');
+             document.getElementById('home-page').classList.add('container');
              break;
          default:
              break;

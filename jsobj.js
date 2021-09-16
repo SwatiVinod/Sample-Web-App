@@ -11,8 +11,37 @@ app.onReady().then(function () {
         function (error) {
             console.log("getUser promise rejected with " + error.message, {});
         })
+    // Create listener for application:themeChanged event
+    app
+       .listen().then(
+           function () {
+               app.on('application:themeChanged', (theme) => {
+                   // Call function to update CSS based on new theme
+                   updateColorTheme(theme);
+               })
+           }
+       )
+       .catch(function (reason) {
+               console.log("listen.then() failed with error: " + Webex.Application.ErrorCodes[reason])
+           }
+       )
 }
 )
+
+function updateColorTheme(theme) {
+     switch (theme) {
+         case "LIGHT":
+             body.style["background"] = "#FFFFFF";
+             body.style["color"] = "#000000";
+             break;
+         case "DARK":
+             body.style["background"] = "#121212";
+             body.style["color"] = "#F7F7F7";
+             break;
+         default:
+             break;
+     }
+ }
 
 function handleSetShareUrl() {
   //var url = document.getElementById("shareUrl").value

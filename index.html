@@ -8,12 +8,12 @@
 </head>
 <script src="https://binaries.webex.com/static-content-pipeline/webex-embedded-app/v1/webex-embedded-app-sdk.js" defer></script>
 <script src="jsobj.js" defer></script>
-<body>
+<body onload="updateName()">
 
     <div class="container">
         <div class="navbar">
-            <div class="login_nav" id="Username">
-                <P>Welcome</P>
+            <div class="login_nav">
+                <P>Game Night</P>
            
             </div>
             <nav>
@@ -21,6 +21,13 @@
                     <li><a href='#' onclick=handleSetShareUrl()>SHARE</a></li>
                 </ul>
             </nav>
+           
+        </div>
+        <div class="navbar">
+            <div class="login_nav" id="Username">
+                <P>Welcome</P>
+           
+            </div>
            
         </div>
 

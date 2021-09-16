@@ -3,6 +3,7 @@ const APP_URL = 'https://swativinod.github.io/Sample-Web-App/'
 
 app.onReady().then(function () {
     console.log("App is ready, getting user info...", {})
+    updateColorTheme(app.theme)
     app.context.getUser().then(
         function (user) {
             console.log('Here '+user)
@@ -29,14 +30,15 @@ app.onReady().then(function () {
 )
 
 function updateColorTheme(theme) {
+     console.log('SWati - '+window.location.href);
      switch (theme) {
          case "LIGHT":
-             body.style["background"] = "#FFFFFF";
-             body.style["color"] = "#000000";
+             document.getElementById('home-page').classList.remove('container');
+             document.getElementById('home-page').classList.add('containerlight');
              break;
          case "DARK":
-             body.style["background"] = "#121212";
-             body.style["color"] = "#F7F7F7";
+             document.getElementById('home-page').classList.remove('containerlight');
+             document.getElementById('home-page').classList.add('container');
              break;
          default:
              break;
@@ -79,6 +81,19 @@ function bingo(){
 
 function openTrivia(){
     window.location.href = "trivia.html";
+    switch (app.theme) {
+         case "LIGHT":
+             document.getElementById('trivia').classList.remove('container');
+             document.getElementById('trivia').classList.add('containerlight');
+             break;
+         case "DARK":
+             document.getElementById('trivia').classList.remove('containerlight');
+             document.getElementById('trivia').classList.add('container');
+             break;
+         default:
+             break;
+     }
+    
 }
 
 function codewords(){

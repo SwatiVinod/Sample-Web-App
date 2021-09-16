@@ -26,9 +26,6 @@ app.onReady().then(function () {
                console.log("listen.then() failed with error: " + Webex.Application.ErrorCodes[reason])
            }
        )
-    window.addEventListener('popstate', function (event) {
-	    console.log('Swati')
-    });
 }
 )
 

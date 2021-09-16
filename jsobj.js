@@ -32,6 +32,10 @@ function spyfall() {
   window.location.href = "https://www.spyfall.app/"
 }
 
+function fishBowl(){
+     window.location.href = "https://fishbowl-game.com/"
+}
+
 function openStressBuster(){
     window.location.href = "stressBuster.html";
 }
@@ -42,6 +46,18 @@ function pictionary(){
 
 function bingo(){
      window.location.href = "https://myfreebingocards.com/mfbc"
+}
+
+function openTrivia(){
+    window.location.href = "trivia.html";
+}
+
+function codewords(){
+     window.location.href = "https://netgames.io/games/codewords/"
+}
+
+function scattergories(){
+     window.location.href = " https://scattergoriesonline.net/"
 }
 
 function updateName() {

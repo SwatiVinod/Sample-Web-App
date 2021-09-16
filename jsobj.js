@@ -107,7 +107,7 @@ function scattergories(){
 function updateName() {
   let name = '!';
   if(app.isPrivateDataAvailable) {
-    let user = await app.context.getUser()
+    let user = await app.context.getUser();
     name = ' '+user.displayName;
     console.log('Got name from framework')
   }

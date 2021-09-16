@@ -153,6 +153,7 @@ async function updateName() {
     name = ' '+user.displayName;
     console.log('Got name from framework')
   }
+  console.log('updating name')
   document.getElementById("Username").innerHTML="Welcome"+ name;
 }
 // cast =[

@@ -30,6 +30,7 @@ app.onReady().then(function () {
 )
 
 function updateColorTheme(theme) {
+     console.log(window.location.href);
      switch (theme) {
          case "LIGHT":
              document.getElementById('home-page').classList.remove('container');

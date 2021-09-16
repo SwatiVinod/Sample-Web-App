@@ -1,9 +1,10 @@
 var app = new window.Webex.Application();
 const APP_URL = 'https://swativinod.github.io/Sample-Web-App/'
 
-app.onReady().then(function () {
+ app.onReady().then(function () {
     console.log("App is ready, getting user info...", {})
     updateColorTheme(app.theme)
+    updateName()
     app.context.getUser().then(
         function (user) {
             console.log('Here '+user)

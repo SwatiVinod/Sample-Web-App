@@ -81,6 +81,19 @@ function bingo(){
 
 function openTrivia(){
     window.location.href = "trivia.html";
+    switch (app.theme) {
+         case "LIGHT":
+             document.getElementById('trivia').classList.remove('container');
+             document.getElementById('trivia').classList.add('containerlight');
+             break;
+         case "DARK":
+             document.getElementById('trivia').classList.remove('containerlight');
+             document.getElementById('trivia').classList.add('container');
+             break;
+         default:
+             break;
+     }
+    
 }
 
 function codewords(){

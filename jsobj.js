@@ -30,7 +30,35 @@ app.onReady().then(function () {
 )
 
 function updateColorTheme(theme) {
-     console.log('SWati - '+window.location.href);
+     console.log('URL - '+window.location.href);
+     if (window.location.href.includes('stressBuster')) {
+         switch (theme) {
+             case "LIGHT":
+                 document.getElementById('stressBuster').classList.remove('container');
+                 document.getElementById('stressBuster').classList.add('containerlight');
+                 break;
+             case "DARK":
+                 document.getElementById('stressBuster').classList.remove('containerlight');
+                 document.getElementById('stressBuster').classList.add('container');
+                 break;
+             default:
+                 break;
+        }
+     }
+    if (window.location.href.includes('icebreaker')) {
+         switch (theme) {
+             case "LIGHT":
+                 document.getElementById('icebreaker').classList.remove('container');
+                 document.getElementById('icebreaker').classList.add('containerlight');
+                 break;
+             case "DARK":
+                 document.getElementById('icebreaker').classList.remove('containerlight');
+                 document.getElementById('icebreaker').classList.add('container');
+                 break;
+             default:
+                 break;
+        }
+     }
      switch (theme) {
          case "LIGHT":
              document.getElementById('home-page').classList.remove('container');

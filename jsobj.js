@@ -31,15 +31,29 @@ app.onReady().then(function () {
 
 function updateColorTheme(theme) {
      console.log('URL - '+window.location.href);
+    if (window.location.href.includes('trivia')) {
+         switch (theme) {
+             case "LIGHT":
+                 document.getElementById('trivia').classList.remove('container');
+                 document.getElementById('trivia').classList.add('containerlight');
+                 break;
+             case "DARK":
+                 document.getElementById('trivia').classList.remove('containerlight');
+                 document.getElementById('trivia').classList.add('container');
+                 break;
+             default:
+                 break;
+        }
+     }
      if (window.location.href.includes('stressBuster')) {
          switch (theme) {
              case "LIGHT":
-                 document.getElementById('stressBuster').classList.remove('container');
-                 document.getElementById('stressBuster').classList.add('containerlight');
+                 document.getElementById('stressbuster').classList.remove('container');
+                 document.getElementById('stressbuster').classList.add('containerlight');
                  break;
              case "DARK":
-                 document.getElementById('stressBuster').classList.remove('containerlight');
-                 document.getElementById('stressBuster').classList.add('container');
+                 document.getElementById('stressbuster').classList.remove('containerlight');
+                 document.getElementById('stressbuster').classList.add('container');
                  break;
              default:
                  break;
